@@ -12,8 +12,8 @@ def exchange(type_from, type_to, amt_from):
     doc.close()
     jstr = docstr.decode('ascii')
     return jstr
-t = exchange(type_from, type_to, amt_from).split()
-print(t[9][1:])
+t = exchange(type_from, type_to, amt_from).split('"')
+print(t[7].split()[0])
 
 
 def test_ass():
